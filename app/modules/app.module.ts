@@ -4,38 +4,35 @@ import { NativeScriptHttpModule } from "nativescript-angular/http";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 
 import { AppRoutingModule } from './app-routing.module';
-
-/* Components */
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
+
 import { HomeComponent } from './home/home.component';
+import { ItemService } from "./services/item.service";
 import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
-import { FavoritesComponent } from "./favorite/favorites.component";
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { SharedModule } from './shared';
 
-/* Services */
-import { ItemService, LoginService } from "./services";
+import { LoginService } from "./services/login.service";
+import { LoginModule } from "./login/login.module";
 
 /* Pipes */
-import { FirstcharacterPipe } from './pipes'; // import our pipe here
+import { FirstcharacterPipe } from './pipes/firstcharacter.pipe'; // import our pipe here
 
 @NgModule({
   imports: [
     NativeScriptModule,
     NativeScriptHttpModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    LoginModule
   ],
   declarations: [
     AppComponent,
 	  ItemsComponent,
     ItemDetailComponent,
-    FavoritesComponent,
     HomeComponent,
-    LoginComponent,
     AboutComponent,
     ContactComponent,
 	  FirstcharacterPipe

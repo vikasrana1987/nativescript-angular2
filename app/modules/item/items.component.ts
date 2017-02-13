@@ -1,5 +1,4 @@
 import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
-import * as SocialShare from "nativescript-social-share";
 
 import { Item } from "./../models/item";
 import { ItemService } from "./../services/item.service";
@@ -8,7 +7,7 @@ import { ItemService } from "./../services/item.service";
     selector: "ns-items",
     moduleId: module.id,
     templateUrl: "./items.component.html",
-    changeDetection: ChangeDetectionStrategy.OnPush
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ItemsComponent implements OnInit {
     items: Item[];
@@ -19,22 +18,15 @@ export class ItemsComponent implements OnInit {
         this.items = this.itemService.getItems();
     }
 
-    favorite(item: any) {
-        if (item.isFavorite) {
+    addToFavorite(item: any) {
+        if(item.isFavorite){
             this.itemService.showToast("Removed from Favorites");
             item.isFavorite = false;
         }
-        else {
+        else{
             this.itemService.showToast("Added to Favorites");
             item.isFavorite = true;
         }
         console.log(item);
-    }
-
-    share(item: any) {
-        let list = [];
-        list.push(item.name);
-        list.push(item.description);
-        SocialShare.shareText(list.join(", ").trim());
-    }
+    } 
 }
