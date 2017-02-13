@@ -1,0 +1,104 @@
+﻿/*
+In NativeScript, the app.css file is where you place CSS rules that
+you would like to apply to your entire application. Check out
+http://docs.nativescript.org/ui/styling for a full list of the CSS
+selectors and properties you can use to style UI components.
+*/
+
+
+/*
+In many cases you may want to use the NativeScript core theme instead
+of writing your own CSS rules. For a full list of class names in the theme
+refer to http://docs.nativescript.org/ui/theme.
+*/
+
+@import 'nativescript-theme-core/css/core.light.css';
+.page-text {
+    vertical-align: center;
+    text-align: center;
+}
+
+.Material {
+    font-family: MaterialIcons-Regular, Material Icons;
+}
+
+button {
+    font-family: 'Roboto', Roboto;
+}
+
+.align-center {
+    vertical-align: center;
+    horizontal-align: center;
+}
+
+.title {
+    font-size: 30;
+    margin: 4;
+}
+
+.subtitle {
+    font-size: 24;
+}
+
+.info {
+    font-size: 20;
+    margin: 4;
+}
+
+.size16 {
+    font-size: 16;
+    margin: 2;
+}
+
+.clear-btn {
+    background-color: white;
+    padding: 5px;
+}
+
+.blue {
+    color: #6A78C5;
+}
+
+.gray {
+    color: #666;
+}
+
+.white {
+    color: #fff;
+}
+
+.red {
+    color: #B22;
+}
+
+.avatar-circle {
+    font-size: 35;
+    height: 50;
+    width: 50;
+    color: #fff;
+    background-color: #FF4081;
+    border-radius: 25;
+    margin-left: 16;
+    margin-top: 5;
+    horizontal-align: center;
+    vertical-align: center;
+    text-align: center;
+}
+
+.blackCard {
+    background-color: #333;
+    color: white;
+}
+
+.blueCard {
+    background-color: #3489db;
+    color: white;
+}
+
+.jokerCard {
+    background-color: yellow;
+}
+
+.whiteCard {
+    background-color: #fff;
+}

@@ -1,0 +1,11 @@
+"use strict";
+var dialogsModule = require("ui/dialogs");
+function alert(message) {
+    return dialogsModule.alert({
+        title: "Groceries",
+        okButtonText: "OK",
+        message: message
+    });
+}
+exports.alert = alert;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGlhbG9nLXV0aWwuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJkaWFsb2ctdXRpbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsMENBQTRDO0FBRTVDLGVBQXNCLE9BQWU7SUFDbkMsTUFBTSxDQUFDLGFBQWEsQ0FBQyxLQUFLLENBQUM7UUFDekIsS0FBSyxFQUFFLFdBQVc7UUFDbEIsWUFBWSxFQUFFLElBQUk7UUFDbEIsT0FBTyxFQUFFLE9BQU87S0FDakIsQ0FBQyxDQUFDO0FBQ0wsQ0FBQztBQU5ELHNCQU1DIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICogYXMgZGlhbG9nc01vZHVsZSBmcm9tIFwidWkvZGlhbG9nc1wiO1xuXG5leHBvcnQgZnVuY3Rpb24gYWxlcnQobWVzc2FnZTogc3RyaW5nKSB7XG4gIHJldHVybiBkaWFsb2dzTW9kdWxlLmFsZXJ0KHtcbiAgICB0aXRsZTogXCJHcm9jZXJpZXNcIixcbiAgICBva0J1dHRvblRleHQ6IFwiT0tcIixcbiAgICBtZXNzYWdlOiBtZXNzYWdlXG4gIH0pO1xufVxuIl19

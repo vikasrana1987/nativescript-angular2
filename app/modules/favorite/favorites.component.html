@@ -1,0 +1,21 @@
+<ActionBar title="Favorites" class="action-bar">
+</ActionBar>
+<side-drawer-page>
+    <ScrollView>
+        <StackLayout class="page">
+            <CardView *ngFor="let item of items" class="cardStyle" margin="10" elevation="40" radius="1">
+                <GridLayout rows="auto, auto, 250, auto" columns="60, auto, *">
+                    <Label [text]="item.name | firstcharacter" [nsRouterLink]="['/item', item.id]" class="avatar-circle" row="0" col="0"></Label>
+                    <Label [text]="item.name" textWrap="true" margin="10" class="size16 align-center" row="0" col="1"></Label>
+                    <Label [text]="item.description" textWrap="true" margin="10" class="size16" row="1" colSpan="3"></Label>
+                    <Image [src]="'~/images/'+item.image" stretch="aspectFill" row="2" colSpan="3"></Image>
+                    <GridLayout row="3" colSpan="3" rows="auto" columns="auto, auto, auto">
+                        <Button text="&#xE80D;" class="Material info clear-btn gray" col="0" (tap)="share(item)"></Button>
+                        <Button text="&#xE0B9;" class="Material info clear-btn gray" col="1"></Button>
+                        <Button text="&#xE87D;" class="Material info clear-btn gray" [ngClass]="{'red': item.isFavorite}" (tap)="removeFromFavorite(item)" col="2"></Button>
+                    </GridLayout>
+                </GridLayout>
+            </CardView>
+        </StackLayout>
+    </ScrollView>
+</side-drawer-page>
