@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
 import { Router } from "@angular/router";
 
 import { Color } from "color";
@@ -13,12 +13,12 @@ import { User } from "./../models/user.model";
 import { LoginService } from "./../services/login.service";
 
 @Component({
-  selector: 'login',
-  templateUrl: './modules/login/login.component.html',
+  selector: "login",
+  templateUrl: "./modules/login/login.component.html",
   styleUrls: ["./modules/login/login-common.css", "./modules/login/login.component.css"],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
 
   user: User;
   isLoggingIn = true;
@@ -42,7 +42,7 @@ export class LoginComponent {
     this.isAuthenticating = true;
     if (this.isLoggingIn) {
       this.login();
-    } 
+    }
   }
 
   login() {
