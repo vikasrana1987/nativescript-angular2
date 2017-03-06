@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
   }
 
   submit() {
+    console.dump(this.user);
     if (!this.user.isValidEmail()) {
       alert("Enter a valid email address.");
       return;
