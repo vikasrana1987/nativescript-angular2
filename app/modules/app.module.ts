@@ -2,6 +2,7 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptHttpModule } from "nativescript-angular/http";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
+import { AccordionComponent } from "nativescript-accordion/angular";
 
 import { AppRoutingModule } from "./app-routing.module";
 
@@ -31,6 +32,7 @@ import { FirstcharacterPipe } from "./pipes"; // import our pipe here
   ],
   declarations: [
     AppComponent,
+    AccordionComponent,
     ItemsComponent,
     ItemDetailComponent,
     FavoritesComponent,
