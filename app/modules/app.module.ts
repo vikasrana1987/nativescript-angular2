@@ -21,7 +21,7 @@ import { SharedModule } from "./shared";
 import { ItemService, LoginService } from "./services";
 
 /* Pipes */
-import { FirstcharacterPipe } from "./pipes"; // import our pipe here
+import { FirstcharacterPipe, TruncatePipe } from "./pipes"; // import our pipe here
 
 @NgModule({
   imports: [
@@ -40,7 +40,8 @@ import { FirstcharacterPipe } from "./pipes"; // import our pipe here
     LoginComponent,
     AboutComponent,
     ContactComponent,
-    FirstcharacterPipe
+    FirstcharacterPipe,
+    TruncatePipe
   ],
   providers: [
     ItemService,
